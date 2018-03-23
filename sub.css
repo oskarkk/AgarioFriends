@@ -1,0 +1,1718 @@
+/*
+// Background
+*/
+
+body {
+	background: url(%%bgdots%%), url(%%bg%%);
+	overflow-x: hidden;
+	position: absolute;
+	width: 100%;
+}
+
+
+
+/*
+// Header
+*/
+
+#header {
+	height: 365px;
+	border: none;
+	background: none;
+	color: white;
+	z-index: initial;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+
+/*
+// Subs list
+*/
+
+#sr-header-area {
+	background: rgba(0,0,0,0.76);
+	border: 0px solid;
+	height: 24px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	line-height: 23px;
+	z-index: 5;
+}
+
+#sr-header-area .sr-bar a, 
+#sr-header-area .separator, 
+#sr-header-area .dropdown.srdrop .selected {
+	background-color: transparent;
+	color: rgba(255,255,255,1);
+}
+
+#sr-more-link {
+	background: #444444;
+	color: rgba(255,255,255,1);
+}
+
+.drop-choices {
+	background: rgba(0,0,0,0.76);
+	border: none !important;
+}
+
+.drop-choices a.choice {
+	color: rgba(255,255,255,1);
+}
+
+.drop-choices a.choice:hover{
+	background: rgba(0,0,0,0.76);
+}
+
+#RESShortcutsEditContainer div {
+	color: white;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+#RESShortcutsEditContainer,
+#RESShortcutsEditContainer div {
+	background: none !important;
+}
+
+
+
+/*
+// Middle links (big blobs)
+*/
+
+#header-bottom-left {
+	position: absolute;
+	height: 365px;
+	/*width: 100%; deleted to avoid covering header-bottom-right, but not random bg */
+	z-index: 2;
+	left: 0px;
+	right: 330px;
+	font-size: 0;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+#header-img {
+	display: block;
+	background: #6b06e7 0/100% !important;
+	border: 4px solid /*#aa00aa*/black !important;
+	border-radius: 50%;
+	width: 125px;
+	height: 125px;
+	position: absolute;
+	left: 40vw;
+	top: 120px;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.pagename {
+	display: block;
+	position: absolute;
+	left: 49vw;
+	top: 180px;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.pagename a { /* text as a normal element */
+	font: bold 30px Ubuntu, Arial, sans-serif;
+	color: white;
+	text-decoration: none !important;
+}
+
+.pagename a:before { /* blob as a centered pseudo element */
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	background: #0791ff;
+	border: 4px solid #0683e6;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+    z-index: -1;
+}
+
+
+
+/*
+// Links in bar above content
+*/
+
+#header .tabmenu {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	height: 18px;
+	padding: 10px;
+	background: rgba(0,0,0,0.76);
+	border-radius: 2px;
+	text-align: center;
+	font: bold 14px Ubuntu, Arial, sans-serif;
+}
+
+#header .tabmenu li a, 
+#header .tabmenu li.selected a {
+	background: transparent;
+	border: none;
+	color: white;
+	padding: 0 5px;
+}
+
+#header .tabmenu li.selected a {
+	font-size: larger;
+}
+
+#header .tabmenu li:nth-child(7) {
+	display: none;
+}
+
+
+
+/*
+// Account links
+*/
+
+#header-bottom-right {
+	position: absolute;
+	z-index: 1;
+	width: 300px;
+	height: 18px !important;
+	background: /*rgba(0,0,0,0.76)*/transparent;
+	border-radius: 2px !important;
+	top: 329px !important;
+	right: 10px;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.user {
+	display: block;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	font-size: 0;
+	top: -80px;
+	left: 60px;
+	z-index: 10;
+}
+
+.user > a {
+	font: bold 20px Ubuntu, Arial, sans-serif;
+	color: white;
+	text-decoration: none;
+	margin: 0 !important;
+	white-space: nowrap;
+}
+
+.user a {
+	color: white;
+}
+
+.user > a:before {
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	position: absolute;
+	background: #85ff07;
+	border: 3px solid #7aea06;
+	border-radius: 50%;
+	width: 125px;
+	height: 125px;
+    z-index: -1;
+}
+
+.userkarma {
+	font: bold 14px Ubuntu, Arial, sans-serif;
+	color: white;
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%, 30px);
+	-webkit-transform: translate(-50%, 30px);
+	white-space: nowrap;
+}
+
+#RESAccountSwitcherIcon {
+	position: absolute;
+	background-color: white;
+	width: 20px !important;
+	height: 20px !important;
+	border-radius: 50%;
+	background-position: center;
+	border: 3px solid black;
+	z-index: -2;
+	left: calc(50% - -48px);
+	bottom: 49px;
+}
+
+#openRESPrefs {
+	position: absolute;
+	z-index: 2;
+	left: 99px;
+	bottom: 164px;
+}
+
+#RESSettingsButton {
+	background-color: white;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	/*background-position: center;*/
+	border: 3px solid black;
+}
+
+#RESMainGearOverlay,
+#RESAccountSwitcherIconOverlay {
+	display: none !important;
+}
+
+#RESPrefsDropdown,
+#RESAccountSwitcherDropdown {
+	top: 24px !important;
+	right: 0px !important;
+	left: initial !important;
+	background: rgba(0,0,0,0.76) !important;
+}
+
+#header-bottom-right .separator {display:none;}
+
+div #mail {
+	position: absolute;
+	display: block;
+	background: 0/60px;
+	border: 3px solid /*#e906c4*/black !important;
+	border-radius: 50%;
+	width: 50px !important;
+	height: 50px;
+	top: 0;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	left: 100px;
+	z-index: 3;
+}
+
+#mail.nohavemail {
+	background-image: url(%%nohavemail%%);
+	background-position: -5px;
+}
+
+#mail.havemail {
+	background-image: url(%%havemail%%);
+	background-position: -5px;
+}
+
+.message-count {
+	z-index: 3;
+	position: absolute;
+	display: block;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	top: 12px;
+	left: 97px;
+	font: bold 14px Ubuntu, Arial, sans-serif;
+	color: #FFF;
+	background: none;
+}
+
+#modmail {
+	position: absolute;
+	display: block;
+	background: 0/48px;
+	border: 3px solid /*#e4ef07*/black !important;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	z-index: 2;
+	left: 127px;
+	top: -24px;
+}
+
+#modmail.nohavemail {
+	background-image: url(%%reddit-head%%);
+	background-position: -4px;
+}
+
+#modmail.havemail {
+	background-image: url(%%reddit-head2%%);
+	background-position: -4px;
+}
+
+#header-bottom-right ul.flat-list.hover {
+	display: block;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	top: -50px;
+	left: 220px;
+	z-index: 2;
+}
+
+li a.pref-lang.choice {
+	font: bold 15px Ubuntu, Arial, sans-serif;
+	color: white;
+	text-decoration: none;
+}
+
+li a.pref-lang.choice:before {
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	position: absolute;
+	background: #07ff9f;
+	border: 3px solid #06db89;
+	border-radius: 50%;
+	width: 65px;
+	height: 65px;
+    z-index: -1;
+}
+
+#header-bottom-right form.logout.hover {
+	display: block;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	top: -97px;
+	left: 185px;
+	z-index: 1;
+}
+
+form.logout.hover a {
+	font: bold 15px Ubuntu, Arial, sans-serif;
+	color: white;
+	text-decoration: none;
+}
+
+form.logout.hover a:before {
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	position: absolute;
+	background: #ff8e07;
+	border: 3px solid #e27e06;
+	border-radius: 50%;
+	width: 55px;
+	height: 55px;
+    z-index: -1;
+}
+
+#userbarToggle {
+	display: none !important;
+}
+
+
+
+/*
+// Sidebar 
+*/
+
+.side {
+	margin: 365px 10px 10px;
+	padding: 10px;
+	background: rgba(0,0,0,0.76);
+	border-radius: 2px;
+	font-size: 11px;
+	width: 300px;
+	color: rgba(255,255,255,1);
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+
+.side .spacer {
+	margin: 0px;
+}
+
+
+
+/*
+// Search 
+*/
+
+#search input[type="text"] {
+	width: 100% !important;
+}
+
+#searchexpando {
+	background: rgba(0,0,0,0.65);
+	border: none;
+	border-radius: 2px;
+	padding: 10px;
+	font-size: 12px;
+}
+
+#searchexpando input {
+	margin-bottom: 0;
+}
+
+#searchexpando p {
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+#searchexpando a {
+	color: #999;
+}
+
+#moresearchinfo {
+	margin-top: 12px !important;
+}
+
+
+
+/*
+// Rare ad under search box
+*/
+
+#ad_sponsorship {
+	margin-top: 15px;
+}
+
+
+
+/*
+// Login box
+*/
+
+#login_login-main {
+	margin: 15px 0;
+	background: rgba(0,0,0,0.65);
+	border: none;
+	border-radius: 2px;
+}
+
+#login_login-main button {
+	background: none;
+	border: none;
+	color: white;
+	font: bold 20px Ubuntu, Arial, sans-serif;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+
+
+/*
+// Submit links 
+*/
+
+.morelink .nub,
+.sidebox.create,
+.comments-page .sidebox.submit,
+.related-page  .sidebox.submit {display: none;}
+
+.morelink {
+	padding: 5px;
+	font: bold 18px/29px Ubuntu,Verdana,Arial,sans-serif;
+	background: none !important;
+	border: none !important;
+}
+
+.morelink a {
+	color: rgba(255,255,255,1);
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+
+
+/*
+// Title on the right 
+*/
+
+.titlebox h1 a {
+	color: white;
+	font: bold 30px Ubuntu, Arial, sans-serif;
+	text-decoration: none !important;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+h1.redditname {
+	margin: 40px 0px;
+	text-align: center;
+}
+
+
+
+/*
+// Subscribed, online, subscribe button
+*/
+
+.titlebox {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.titlebox .fancy-toggle-button {
+	margin-top: 8px !important;
+	margin-bottom: 0px;
+}
+
+.titlebox .fancy-toggle-button,
+.RESshortcut.RESshortcutside,
+.REStoggle.RESDashboardToggle {
+	display: block !important;
+	margin: 0 auto;
+	padding: 0px;
+	width: auto;
+}
+
+.fancy-toggle-button .remove, 
+.fancy-toggle-button .add,
+.RESshortcut.RESshortcutside,
+.REStoggle.RESDashboardToggle {
+	background: transparent !important;
+	border: none !important;
+	font: bold 18px Ubuntu, Arial, sans-serif !important;
+	color: white;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.REStoggle.RESDashboardToggle.remove,
+.RESshortcut.RESshortcutside.remove {
+	background: transparent !important;
+}
+
+.REStoggle.RESDashboardToggle {
+	margin-bottom: 5px !important;
+}
+
+.side .subscribers {
+	margin-top: 10px;
+	display: block;
+}
+
+.users-online {
+	display: inline-block;
+}
+
+.users-online::before {
+	display: none;
+}
+
+.hover-bubble {
+	background: rgba(0,0,0,0.76);
+	border: none;
+	box-shadow: none;
+	border-radius: 2px;
+	color: #999;
+}
+
+.hover-bubble a {
+	color: white;
+}
+
+.hover-bubble.anchor-right:before {
+	display: none;
+}
+
+.hover-bubble.anchor-right:after {
+	border-left-color: rgba(0,0,0,0.76) !important;
+}
+
+.hover-bubble.multi-selector strong {
+	color: #999;
+}
+
+.hover-bubble.multi-selector label a {
+	width: 14px;
+	height: 14px;
+	background: rgba(0,0,0,0.5);
+	border: none;
+}
+
+.hover-bubble.multi-selector label:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+
+
+/*
+// Change the word for 'readers' and the currently online
+*/
+
+.subscribers .word, .users-online .word{
+	display: none;
+}
+
+.subscribers .number:after { 
+	content: " socializing on agar.io"
+}
+
+.users-online .number:after { 
+	content: " searching for friends now"
+}
+
+
+
+/*
+// Subbreddit user info
+*/
+
+.leavemoderator {
+	margin-top: 20px;
+}
+
+.titlebox form.toggle, 
+.leavemoderator {
+	background: none;
+	color: white;
+	font-size: 10px;
+	padding: 2px 0px;
+}
+
+.titlebox .leavemoderator::before, 
+.titlebox form.leavecontributor-button::before {
+	display: none;
+}
+
+.titlebox form.toggle a, 
+.leavemoderator a,
+.titlebox .tagline a {
+	color: #999;
+}
+
+.titlebox .tagline {
+	color: white;
+	margin: 5px 0 35px 0;
+}
+
+.flairselector { /* do dokończenia gdy już będą */
+	box-shadow: none;
+}
+
+.flairselector h2 {
+	background: none;
+	color: #999;
+}
+
+
+
+/*
+// Sidebar content (usertext)
+*/
+
+.usertext {
+	margin: 10px 0;
+	text-align: left;
+}
+
+.md {
+	color: white;
+}
+
+.md a {
+	font-weight: bold;
+	color: white;
+}
+
+
+
+/*
+// Rest of the sidebar
+*/
+
+.titlebox .bottom {
+	font-size: 65%;
+	text-align: left;
+}
+
+.titlebox .bottom a {
+	color: #BBB;
+}
+
+.titlebox time {
+	color: #BBB;
+}
+
+.icon-menu a {
+	background: none;
+	color: white;
+	font-size: 12px;
+}
+
+.icon-menu li {
+	margin: 3px 0;
+}
+
+#moderation_tools {
+	margin-bottom: 20px;
+}
+
+.sidecontentbox {
+	margin-top: 15px;
+}
+
+.sidecontentbox .score, 
+.sidecontentbox .more a, 
+.sidecontentbox .title h1 {
+	color: #BBB;
+}
+
+.sidecontentbox a {
+	margin-top: 15px;
+	color: white;
+}
+
+.account-activity-box a {
+	color: white;
+}
+
+.linkinfo {
+	background: rgba(0,0,0,0.76);
+	text-align: center;
+	margin: 10px 0;
+	border: none;
+	padding: 10px;
+}
+
+.linkinfo div {
+	line-height: 28px;
+}
+
+.shortlink-text {
+	font-size: 120%;
+}
+
+
+
+/*
+// Main content 
+*/
+
+body > .content {
+	padding: 10px;
+	background: rgba(0,0,0,0.76);
+	border-radius: 2px;
+	margin: 365px 340px 10px 10px !important;
+	position: relative;
+	z-index: 2;
+}
+
+.content p a.title,
+.content p a.title:visited {
+	font: bold 18px Ubuntu, Arial, sans-serif !important;
+	color: white;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.tagline a.author {
+	color: #BBB;
+}
+
+.content .expando .md,
+.infobar {
+	background: rgba(0,0,0,0.76);
+	border: none;
+	border-radius: 2px;
+	color: white;
+}
+
+.link.last-clicked {
+	border: none;
+	overflow: visible;
+}
+
+.link {
+	margin: 25px 0;
+	position: relative;
+}
+
+.link .rank {
+	display: none;
+}
+
+.thing.stickied a.title, 
+.thing.stickied a.title:visited, 
+.thing.stickied a.title.visited,
+.tagline .stickied-tagline {
+	color: #2fba2f;
+}
+
+
+
+/*
+// Entry expando buttons
+*/
+
+.expando-button.selftext.collapsed,
+.expando-button.selftext.expanded,
+.expando-button.video.collapsed,
+.expando-button.video.expanded {
+	background: rgba(0,0,0,0.55);
+	border-radius: 2px;
+	text-align: center;
+	line-height: 23px;
+}
+
+.expando-button.selftext.collapsed:hover,
+.expando-button.selftext.expanded:hover,
+.expando-button.video.collapsed:hover,
+.expando-button.video.expanded:hover {
+	background: rgba(0,0,0,0.55);
+}
+
+.expando-button.selftext:after {
+	font: bold 15px Ubuntu, Arial, sans-serif !important;
+	color: white;
+}
+
+.expando-button.video:after {
+	font: bold 12px Ubuntu, Arial, sans-serif !important;
+	color: white;
+	position: relative;
+	top: 3px;
+	right: 2px;
+}
+
+.expando-button.video:before {
+	content: "▶";
+	font: bold 16px Ubuntu, Arial, sans-serif !important;
+	color: white;
+	position: relative;
+	bottom: 2px;
+	left: 4px;
+}
+
+.expando-button.selftext.collapsed:after,
+.expando-button.video.collapsed:after  {
+	content: "+";
+}
+
+.expando-button.selftext.expanded:after,
+.expando-button.video.expanded:after {
+	content: "-";
+}
+
+
+
+/*
+// Vote buttons
+*/
+
+body > .content .link div.midcol {
+	width: 40px;
+	position: absolute;
+	transform: translate(0,-50%);
+	-webkit-transform: translate(0, -50%);
+	top: 50%;
+	margin: 0;
+}
+
+body > .content .link .entry {
+	left: 50px;
+	position: relative;
+}
+
+body .content div.arrow {
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+}
+
+@keyframes up {
+	from {width: 12px; height: 12px; background: #b7b7b7; border: 4px solid #a8a8a8;}
+	to {width: 28px; height: 28px; background: #ff6507; border: 4px solid #dd5706;}
+}
+
+@keyframes down {
+	from {width: 12px; height: 12px; background: #b7b7b7; border: 4px solid #a8a8a8;}
+	to {width: 28px; height: 28px; background: #779aff; border: 4px solid #6785dd;}
+}
+
+@-webkit-keyframes up {
+	from {width: 12px; height: 12px; background: #b7b7b7; border: 4px solid #a8a8a8;}
+	to {width: 28px; height: 28px; background: #ff6507; border: 4px solid #dd5706;}
+}
+
+@-webkit-keyframes down {
+	from {width: 12px; height: 12px; background: #b7b7b7; border: 4px solid #a8a8a8;}
+	to {width: 28px; height: 28px; background: #779aff; border: 4px solid #6785dd;}
+}
+
+.arrow.up,
+.arrow.upmod,
+.arrow.down,
+.arrow.downmod  {
+	background: #b7b7b7;
+	border: 4px solid #a8a8a8;
+}
+
+.arrow.upmod {
+	animation-name: up;
+    animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: up;
+    -webkit-animation-duration: 0.25s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.arrow.downmod {
+	animation-name: down;
+    animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: down;
+    -webkit-animation-duration: 0.25s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+.comment .midcol,
+.gadget .midcol {
+	width: 42px;
+}
+
+.link .entry {
+	width: 90%;
+	width: calc(100% - 50px);
+}
+
+
+
+/*
+// Submission
+*/
+
+.panestack-title span.title,
+#REScommentSubToggle.RESSubscriptionButton,
+#REScommentSubToggle.RESSubscriptionButton.unsubscribe {
+	font: bold 15px Ubuntu, Arial, sans-serif !important;
+	color: white;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+#REScommentSubToggle.RESSubscriptionButton,
+#REScommentSubToggle.RESSubscriptionButton:hover,
+#REScommentSubToggle.RESSubscriptionButton.unsubscribe,
+#REScommentSubToggle.RESSubscriptionButton.unsubscribe:hover {
+	border: none;
+	background: none;
+}
+
+#REScommentSubToggle.RESSubscriptionButton:before {content:"(";}
+#REScommentSubToggle.RESSubscriptionButton:after{content:")";}
+
+.rounded.gold-accent.comment-visits-box {
+	background: rgba(0,0,0,0.76);
+	border: none;
+	border-radius: 2px;
+	color: #DDD;
+}
+
+.nestedlisting .comment {
+	margin: 10px;
+	padding: 5px;
+}
+
+.comment .child, 
+.comment .showreplies {
+	margin: 0;
+	border-left: 7px solid rgba(0,0,0,0.76);
+}
+
+.md blockquote {
+	border-left: 2px solid #BBB;
+}
+
+.md blockquote,
+.md del {
+	color: #BBB;
+}
+
+.tagline .userattrs {
+	font-size: 0;
+}
+
+.tagline .userattrs .submitter,
+.tagline .userattrs .moderator {
+	margin: 0 3px;
+	font: bold 15px Ubuntu, Arial, sans-serif !important;
+	color: white;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.tagline .expand {
+	color: white;
+}
+
+.res:not(.res-nightmode) .commentarea .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment .comment .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res:not(.res-nightmode) .commentarea .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+    background: transparent !important;
+	border: none !important;
+	margin: 0px !important;
+	border-left: 7px solid rgba(0, 0, 0, 0.76) !important;
+}
+
+.new-comment .usertext-body {
+	border: none;
+	background: rgba(255, 255, 255, 0.21)
+}
+
+.tagline span.score {
+	color: #888 !important;
+}
+
+.commentarea .menuarea,
+.commentarea .menuarea .toggle a,
+.menuarea .dropdown.lightdrop .selected,
+div.commentingAs,
+.bottom-area a,
+.usertext .markhelp a {
+	color: #BBB;
+}
+
+.usertext .markhelp {
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.76);
+	border: none;
+	color: white;
+}
+
+.usertext .markhelp tr:first-child {
+	background: rgba(255, 255, 255, 0.21) !important;
+}
+
+.md code, 
+.md pre {
+    border: none;
+    background: rgba(0, 0, 0, 0.76);
+    border-radius: 2px;
+}
+
+.res .RES-keyNav-activeElement, 
+.res .commentarea .RES-keyNav-activeElement .md, 
+.res .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+	background: none !important;
+	border-right: 5px solid rgba(0,0,0,0.53) !important;
+}
+
+
+
+/*
+// Submit page
+*/
+
+.tabmenu.formtab {
+	text-align: center;
+	padding: 0;
+	margin-top: 15px
+}
+
+.tabmenu.formtab li a  {
+	background: rgba(0,0,0,0.3);
+	border: none;
+	color: #BBB;
+}
+
+.tabmenu.formtab li.selected a  {
+	background: rgba(0,0,0,0.76);
+	border: none;
+	color: #BBB;
+}
+
+.formtabs-content {
+	border-top-color: rgba(0,0,0,0.76);
+	margin: 0 auto 5px;
+}
+
+.formtabs-content .roundfield,
+.content.submit .info-notice {
+	background: rgba(0,0,0,0.76);
+	border-radius: 2px;
+	border: none;
+	color: #BBB;
+}
+
+.formtabs-content .roundfield a,
+.info-notice a {
+	color: white;
+}
+
+.submit-page .content h1,
+.submit-page .content h1 a {
+	font: bold 20px Ubuntu,Verdana,Arial,sans-serif !important;
+	color: #FFF;
+	text-align: center;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.info-notice {
+	margin: 0 auto 12px;
+}
+
+.content.submit > *:last-child {
+	text-align: center;
+}
+
+.submit-page .btn {
+	background: rgba(0,0,0,0.76);
+	border-radius: 2px;
+	border: none;
+	font: bold 30px Ubuntu,Verdana,Arial,sans-serif !important;
+	color: #FFF;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+
+
+/*
+// Footer
+*/
+
+.debuginfo {
+	position: relative;
+	z-index: 2;
+}
+	
+.footer-parent {
+	z-index: 2;
+	position: relative;
+	background: rgba(0, 0, 0, 0.76);
+	top: 26px;
+	padding: 0;
+}
+
+.footer.rounded {
+	border: none;
+	margin: 15px auto 50px;
+	height: 268px;
+	padding-top: 54px;
+	max-width: 800px;
+}
+
+.footer .col {
+	border: none;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.footer .col ul {
+	position: relative;
+}
+
+.footer .col ul li:not(.title) {
+	position: relative;
+}
+
+.footer .col ul li.title,
+.footer .col ul li a {
+	font: bold 15px Ubuntu, Arial, sans-serif;
+	display: block;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	color: white;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.footer .col ul li.title {
+	font-size: 20px;
+}
+
+.footer .col ul li.title:before,
+.footer .col ul li a:before {
+	content: "";
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	position: absolute;
+	border-radius: 50%;
+    z-index: -1;
+}
+
+
+
+/*
+// Footer blobs - position
+*/
+
+.footer .col:nth-child(1) ul li.title {
+	top: 90px;
+	left: 100px;
+	z-index: 10;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(2) a {
+	top: 45px;
+	left: 20px;
+	z-index: 9;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(3) a {
+	top: 20px;
+	left: 150px;
+	z-index: 8;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(4) a {
+	top: 174px;
+	left: 56px;
+	z-index: 7;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(5) a {
+	top: 177px;
+	left: 126px;
+	z-index: 6;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(6) a {
+	top: 222px;
+	left: 98px;
+	z-index: 5;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(7) a {
+	top: 6px;
+	left: 64px;
+	z-index: 4;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(8) a {
+	top: 246px;
+	left: 175px;
+	z-index: 3;
+}
+
+.footer .col:nth-child(2) ul li.title {
+	top: 190px;
+	left: 100px;
+	z-index: 10;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(2) a {
+	top: 126px;
+	left: 124px;
+	z-index: 9;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(3) a {
+	top: 152px;
+	left: 15px;
+	z-index: 8;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(4) a {
+	top: 95px;
+	left: 1px;
+	z-index: 7;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(5) a {
+	top: 252px;
+	left: 172px;
+	z-index: 6;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(6) a {
+	top: 69px;
+	left: 65px;
+	z-index: 5;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(7) a {
+	top: 7px;
+	left: 61px;
+	z-index: 4;
+}
+
+.footer .col:nth-child(3) ul li.title {
+	top: 160px;
+	left: 100px;
+	z-index: 10;
+}
+
+.footer .col:nth-child(3) ul li:nth-child(2) a {
+	top: 74px;
+	left: 42px;
+	z-index: 9;
+}
+
+.footer .col:nth-child(3) ul li:nth-child(3) a {
+	top: 87px;
+	left: 167px;
+	z-index: 8;
+}
+
+.footer .col:nth-child(3) ul li:nth-child(4) a {
+	top: 240px;
+	left: 150px;
+	z-index: 7;
+}
+
+.footer .col:nth-child(3) ul li:nth-child(5) a {
+	top: 261px;
+	left: 91px;
+	z-index: 6;
+}
+
+.footer .col:nth-child(4) ul li.title {
+	top: 60px;
+	left: 100px;
+	z-index: 10;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(2) a {
+	top: 217px;
+	left: 107px;
+	z-index: 9;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(3) a {
+	top: 125px;
+	left: 53px;
+	z-index: 8;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(4) a {
+	top: 158px;
+	left: 99px;
+	z-index: 11;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(5) a {
+	top: 180px;
+	left: 57px;
+	z-index: 6;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(6) a {
+	top: 14px;
+	left: 33px;
+	z-index: 5;
+}
+
+
+
+/*
+// Footer blobs - color, size
+*/
+
+.footer .col:nth-child(1) ul li.title:before,
+.footer .col:nth-child(1) ul li a:before {
+	background: #ff6507;
+	border: 3px solid #e65b06;
+}
+
+.footer .col:nth-child(2) ul li.title:before,
+.footer .col:nth-child(2) ul li a:before {
+	background: #fffc07;
+	border: 3px solid #e6e306;
+}
+
+.footer .col:nth-child(3) ul li.title:before,
+.footer .col:nth-child(3) ul li a:before {
+	background: #4e07ff;
+	border: 3px solid #4606e6;
+}
+
+.footer .col:nth-child(4) ul li.title:before,
+.footer .col:nth-child(4) ul li a:before {
+	background: #7fff07;
+	border: 3px solid #73e606;
+}
+
+.footer .col:nth-child(1) ul li.title:before {
+	width: 120px;
+	height: 120px;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(2) a:before {
+	width: 55px;
+	height: 55px;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(3) a:before {
+	width: 45px;
+	height: 45px;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(4) a:before {
+	width: 62px;
+	height: 62px;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(5) a:before {
+	width: 55px;
+	height: 55px;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(6) a:before {
+	width: 45px;
+	height: 45px;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(7) a:before {
+	width: 50px;
+	height: 50px;
+}
+
+.footer .col:nth-child(1) ul li:nth-child(8) a:before {
+	width: 40px;
+	height: 40px;
+}
+
+.footer .col:nth-child(2) ul li.title:before {
+	width: 115px;
+	height: 115px;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(2) a:before {
+	width: 60px;
+	height: 60px;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(3) a:before {
+	width: 65px;
+	height: 65px;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(4) a:before {
+	width: 47px;
+	height: 47px;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(5) a:before {
+	width: 68px;
+	height: 68px;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(6) a:before {
+	width: 60px;
+	height: 60px;
+}
+
+.footer .col:nth-child(2) ul li:nth-child(7) a:before {
+	width: 55px;
+	height: 55px;
+}
+
+.footer .col:nth-child(3) ul li.title:before {
+	width: 130px;
+	height: 130px;
+}
+
+.footer .col:nth-child(3) ul li:nth-child(2) a:before {
+	width: 67px;
+	height: 67px;
+}
+
+.footer .col:nth-child(3) ul li:nth-child(3) a:before {
+	width: 60px;
+	height: 60px;
+}
+
+.footer .col:nth-child(3) ul li:nth-child(4) a:before {
+	width: 50px;
+	height: 50px;
+}
+
+.footer .col:nth-child(3) ul li:nth-child(5) a:before {
+	width: 65px;
+	height: 65px;
+}
+
+.footer .col:nth-child(4) ul li.title:before {
+	width: 95px;
+	height: 95px;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(2) a:before {
+	width: 65px;
+	height: 65px;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(3) a:before {
+	width: 60px;
+	height: 60px;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(4) a:before {
+	width: 45px;
+	height: 45px;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(5) a:before {
+	width: 40px;
+	height: 40px;
+}
+
+.footer .col:nth-child(4) ul li:nth-child(6) a:before {
+	width: 60px;
+	height: 60px;
+}
+
+
+
+/*
+// Random background
+*/
+ 
+input[name=uh] ~ a:after {
+    position: absolute;
+    z-index: -2;
+	top: -225px;
+	top: calc(50% - 220px);
+	left: -48vw;
+	left: calc(50% - -140px - 50vw);
+	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+}
+#header-bottom-right form.logout.hover:after {
+	content: "";
+	height: 3610px;
+	width: 2410px;
+    position: absolute;
+    z-index: -2;
+	top: -225px;
+	top: calc(50% - 220px);
+	left: -48vw;
+	left: calc(50% - -140px - 50vw);
+	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+}
+
+/*
+#header-bottom-right ul.flat-list.hover li a[onclick="return showlang();"]:after {
+	content: "";
+	height: 3610px;
+	width: 2410px;
+    position: absolute;
+    z-index: -2;
+	top: -225px;
+	top: calc(50% - 220px);
+	left: -48vw;
+	left: calc(50% - -140px - 50vw);
+	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+}
+*/
+input[name=uh][value^="0"] ~ a:after { content: url('%%bg01%%'); }
+input[name=uh][value^="1"] ~ a:after { content: url('%%bg01%%'); }
+input[name=uh][value^="2"] ~ a:after { content: url('%%bg01%%'); }
+input[name=uh][value^="3"] ~ a:after { content: url('%%bg01%%'); }
+input[name=uh][value^="4"] ~ a:after { content: url('%%bg01%%'); }
+input[name=uh][value^="5"] ~ a:after { content: url('%%bg02%%'); }
+input[name=uh][value^="6"] ~ a:after { content: url('%%bg02%%'); }
+input[name=uh][value^="7"] ~ a:after { content: url('%%bg02%%'); }
+input[name=uh][value^="8"] ~ a:after { content: url('%%bg02%%'); }
+input[name=uh][value^="9"] ~ a:after { content: url('%%bg02%%'); }
+input[name=uh][value^="a"] ~ a:after { content: url('%%bg03%%'); }
+input[name=uh][value^="b"] ~ a:after { content: url('%%bg03%%'); }
+input[name=uh][value^="c"] ~ a:after { content: url('%%bg03%%'); }
+input[name=uh][value^="d"] ~ a:after { content: url('%%bg03%%'); }
+input[name=uh][value^="e"] ~ a:after { content: url('%%bg03%%'); }
+input[name=uh][value^="f"] ~ a:after { content: url('%%bg04%%'); }
+input[name=uh][value^="g"] ~ a:after { content: url('%%bg04%%'); }
+input[name=uh][value^="h"] ~ a:after { content: url('%%bg04%%'); }
+input[name=uh][value^="i"] ~ a:after { content: url('%%bg04%%'); }
+input[name=uh][value^="j"] ~ a:after { content: url('%%bg04%%'); }
+input[name=uh][value^="k"] ~ a:after { content: url('%%bg05%%'); }
+input[name=uh][value^="l"] ~ a:after { content: url('%%bg05%%'); }
+input[name=uh][value^="m"] ~ a:after { content: url('%%bg05%%'); }
+input[name=uh][value^="n"] ~ a:after { content: url('%%bg05%%'); }
+input[name=uh][value^="o"] ~ a:after { content: url('%%bg05%%'); }
+input[name=uh][value^="p"] ~ a:after { content: url('%%bg06%%'); }
+input[name=uh][value^="q"] ~ a:after { content: url('%%bg06%%'); }
+input[name=uh][value^="r"] ~ a:after { content: url('%%bg06%%'); }
+input[name=uh][value^="s"] ~ a:after { content: url('%%bg06%%'); }
+input[name=uh][value^="t"] ~ a:after { content: url('%%bg06%%'); }
+input[name=uh][value^="u"] ~ a:after { content: url('%%bg07%%'); }
+input[name=uh][value^="v"] ~ a:after { content: url('%%bg07%%'); }
+input[name=uh][value^="w"] ~ a:after { content: url('%%bg07%%'); }
+input[name=uh][value^="x"] ~ a:after { content: url('%%bg07%%'); }
+input[name=uh][value^="y"] ~ a:after { content: url('%%bg07%%'); }
+input[name=uh][value^="z"] ~ a:after { content: url('%%bg07%%'); }
+/*
+.user .login-required:after {
+    content: url('%%bg04%%');
+    position: absolute;
+    z-index: -2;
+	top: -225px;
+	top: calc(50% - 220px);
+	left: -48vw;
+	left: calc(50% - -140px - 50vw);
+	transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+}
+
+ul.flat-list.hover:not(#mail~ul.flat-list.hover) {
+	background: red;
+}*/
